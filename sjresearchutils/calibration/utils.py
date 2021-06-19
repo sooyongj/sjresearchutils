@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def plot_reliability_diagram(ece_obj):
@@ -34,6 +33,7 @@ def plot_confidence_dist(confs, n_bins=15):
   plt.figure()
   plt.bar(bin_edges[:-1], height=cnt / confs.shape[0], width=bin_edges[1:] - bin_edges[:-1])
   plt.xlim([0.0, 1.0])
+  plt.ylim([0.0, 1.0])
   plt.xlabel('Confidence')
   plt.ylabel('Percentages')
 
