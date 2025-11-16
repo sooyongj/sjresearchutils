@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot_reliability_diagram(ece_obj):
@@ -40,7 +41,6 @@ def plot_confidence_dist(confs, n_bins=15):
 
 if __name__ == '__main__':
   from sjresearchutils.calibration.Ece import ECE
-  import numpy as np
   e = ECE(15)
 
   y_pred = np.array([0, 1, 2, 3, 4, 5, 1, 2])
